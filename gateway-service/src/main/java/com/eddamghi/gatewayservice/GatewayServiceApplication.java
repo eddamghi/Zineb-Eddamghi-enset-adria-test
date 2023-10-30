@@ -8,8 +8,9 @@ import org.springframework.cloud.gateway.discovery.DiscoveryClientRouteDefinitio
 import org.springframework.cloud.gateway.discovery.DiscoveryLocatorProperties;
 import org.springframework.context.annotation.Bean;
 
+
 @SpringBootApplication
-@EnableDiscoveryClient
+
 public class GatewayServiceApplication {
 
     public static void main(String[] args) {
@@ -18,7 +19,7 @@ public class GatewayServiceApplication {
 
     @Bean
     DiscoveryClientRouteDefinitionLocator dynamicRoutes(ReactiveDiscoveryClient rdc, DiscoveryLocatorProperties dlp) {
-        return new DiscoveroyClientRouteDefinitionLocator(rdc, dlp);
+        return new DiscoveryClientRouteDefinitionLocator(rdc, dlp);
     }
 
 }
